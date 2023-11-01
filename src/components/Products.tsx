@@ -85,7 +85,7 @@ const Products = () => {
                     )}
                 </div>
 
-                <div className="text-white">
+                <div className="text-white mb-12">
                     <Button
                         onClick={() =>
                             setCurrentPage((prevPage) =>
