@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../data";
 import ProductsCard from "./ProductsCard";
 import Filter from "./Filters";
 import { Button } from "./ui/button";
 import Sort from "./Sort";
+import { Skeleton } from "./ui/skeleton";
 
 const Products = () => {
     const [selectedFilter, setSelectedFilter] = useState("");
+    const [showSkeleton, setShowSkeleton] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowSkeleton(false);
+        }, 1500);
 
+        return () => clearTimeout(timer);
+    }, []);
     // sorting
     const [selectedSort, setSelectedSort] = useState("");
 
@@ -43,10 +51,11 @@ const Products = () => {
         selectedFilter === "All" || selectedFilter === ""
             ? Math.ceil(data.length / productsPerPage)
             : Math.ceil(filteredProducts.length / productsPerPage);
+
     return (
         <>
             <div className="mt-10 w-full h-full  flex  flex-wrap justify-center  items-center">
-                <div className="mt-4 w-[90%] h-full  flex  flex-wrap  p-4 gap-10">
+                <div className="mt-4 w-[90%] h-full  flex  flex-wrap  gap-10">
                     <Filter
                         selectedFilter={selectedFilter}
                         setSelectedFilter={setSelectedFilter}
@@ -55,15 +64,25 @@ const Products = () => {
                         selectedSort={selectedSort}
                         setSelectedSort={setSelectedSort}
                     />
-                    {filteredProducts.map((product) => (
-                        <ProductsCard
-                            key={product.id}
-                            title={product.title}
-                            price={product.price}
-                            category={product.category}
-                            image={product.image}
-                        />
-                    ))}
+                    {showSkeleton ? (
+                        <>
+                            <ProductCardSkeleton />
+                            <ProductCardSkeleton />
+                            <ProductCardSkeleton />
+                        </>
+                    ) : (
+                        <div className="mt-4 w-full h-full  flex  flex-wrap  p-4 gap-10">
+                            {filteredProducts.map((product) => (
+                                <ProductsCard
+                                    key={product.id}
+                                    title={product.title}
+                                    price={product.price}
+                                    category={product.category}
+                                    image={product.image}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <div className="text-white">
@@ -97,3 +116,7 @@ const Products = () => {
 };
 
 export default Products;
+
+function ProductCardSkeleton() {
+    return <Skeleton className="border-2 border-primary-/20 h-52 w-full" />;
+}

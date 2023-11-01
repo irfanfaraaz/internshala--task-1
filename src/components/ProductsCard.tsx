@@ -9,8 +9,8 @@ interface Props {
 export default function ProductsCard({ title, price, category, image }: Props) {
     return (
         <Card className="w-full shadow-md shadow-blue-700 bg-slate-900 text-muted-foreground p-1">
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-                <CardTitle className="font-medium text-muted-foreground">
+            <CardHeader className="flex flex-row items-center justify-between  pb-2">
+                <CardTitle className="p-2 font-bold text-2xl bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent hover:from-indigo-600 hover:to-cyan-300 hover:cursor-pointer">
                     {title}
                 </CardTitle>
             </CardHeader>
@@ -26,7 +26,7 @@ export default function ProductsCard({ title, price, category, image }: Props) {
                         Eius odio hic mollitia qui sequi. Vitae animi earum
                         repudiandae maxime repellendus.
                     </p>
-                    <p>{category}</p>
+                    <p className="font-bold text-amber-300">{category}</p>
                     <div className="flex justify-end text-zinc-100 text-lg">
                         ${price}
                     </div>
