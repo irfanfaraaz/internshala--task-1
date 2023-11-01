@@ -1,27 +1,46 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the React + TypeScript + Vite template! This repository provides a minimal setup to kickstart your React project with TypeScript in Vite. Enjoy the benefits of fast development with HMR (Hot Module Replacement) and enhance your code quality with some ESLint rules.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone this repository:
 
-## Expanding the ESLint configuration
+   ```bash
+   git clone https://github.com/irfanfaraaz/intern-task-1
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Install dependencies:
 
-- Configure the top-level `parserOptions` property like this:
+   ```bash
+   npm install
+   ```
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+3. Run the development server:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```bash
+   npm run dev
+   ```
+
+Now you're all set!
+Open your browser and navigate to http://localhost:5173/ to view your React application.
+
+## About the Project
+
+## Tech Stack
+
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that enhances code quality and catches errors during development.
+- **Vite**: A fast development build tool that provides a zero-config setup and supports HMR (Hot Module Replacement).
+- **Tailwind CSS**: A utility-first CSS framework that helps you build designs quickly and with less code.
+- **Shadcn**: (assuming you meant "Shadow DOM") A web standard that offers scoped styles and encapsulation for your components.
+
+
+This repository houses a responsive and interactive web page designed to display a list of products. Users can easily filter and sort the products based on various attributes such as price, category, and more.
+
+### Features
+
+- **Responsive Design**: Ensure a seamless user experience across various devices and screen sizes.
+- **Filter and Sort**: Empower users to efficiently navigate and find products with filtering and sorting options.
+- **Pagination**
+
