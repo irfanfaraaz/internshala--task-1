@@ -45,7 +45,7 @@ const Products = () => {
             : Math.ceil(filteredProducts.length / productsPerPage);
     return (
         <>
-            <div className="mt-4 w-full h-full  flex  flex-wrap justify-center  items-center">
+            <div className="mt-10 w-full h-full  flex  flex-wrap justify-center  items-center">
                 <div className="mt-4 w-[90%] h-full  flex  flex-wrap  p-4 gap-10">
                     <Filter
                         selectedFilter={selectedFilter}
