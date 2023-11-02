@@ -33,7 +33,7 @@ Open your browser and navigate to http://localhost:5173/ to view your React appl
 - **TypeScript**: A typed superset of JavaScript that enhances code quality and catches errors during development.
 - **Vite**: A fast development build tool that provides a zero-config setup and supports HMR (Hot Module Replacement).
 - **Tailwind CSS**: A utility-first CSS framework that helps you build designs quickly and with less code.
-- **Shadcn**: (assuming you meant "Shadow DOM") A web standard that offers scoped styles and encapsulation for your components.
+- **Shadcn**: A web standard that offers scoped styles and encapsulation for your components.
 
 
 This repository houses a responsive and interactive web page designed to display a list of products. Users can easily filter and sort the products based on various attributes such as price, category, and more.
