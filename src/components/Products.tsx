@@ -12,7 +12,7 @@ const Products = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowSkeleton(false);
-        }, 1500);
+        }, 1400);
 
         return () => clearTimeout(timer);
     }, []);
