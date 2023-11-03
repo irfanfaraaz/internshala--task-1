@@ -26,13 +26,13 @@ export default function ProductsCard({ title, price, category, image }: Props) {
             </CardHeader>
             <CardContent className=" flex flex-col sm:flex-row  text-muted-foreground pt-1">
                 {showSkeleton ? (
-                    <Skeleton className="border-2 border-primary-/20 h-48 w-80 rounded-2xl" />
+                    <Skeleton className="border-2 border-primary-/20 w-60 h-44 max-sm:ml-8 sm:w-80 sm:h-48 rounded-2xl" />
                 ) : (
                     <div className="">
                         <img
                             src={image}
                             alt="product"
-                            className="w-80 h-48 rounded-2xl shadow-md shadow-gray-600"
+                            className="w-60 h-44 max-sm:ml-8 sm:w-80 sm:h-48 rounded-2xl shadow-md shadow-gray-600"
                         />
                     </div>
                 )}

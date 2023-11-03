@@ -65,11 +65,11 @@ const Products = () => {
                         setSelectedSort={setSelectedSort}
                     />
                     {showSkeleton ? (
-                        <>
+                        <div className="mt-4 w-full h-full  flex  flex-wrap gap-10">
                             <ProductCardSkeleton />
                             <ProductCardSkeleton />
                             <ProductCardSkeleton />
-                        </>
+                        </div>
                     ) : (
                         <div className="mt-4 w-full h-full  flex  flex-wrap  p-4 gap-10">
                             {filteredProducts.map((product) => (
@@ -118,5 +118,5 @@ const Products = () => {
 export default Products;
 
 function ProductCardSkeleton() {
-    return <Skeleton className="border-2 border-primary-/20 h-52 w-full" />;
+    return <Skeleton className="border-2 border-primary-/20 w-full h-72 " />;
 }
