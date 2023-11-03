@@ -26,18 +26,18 @@ export default function ProductsCard({ title, price, category, image }: Props) {
             </CardHeader>
             <CardContent className=" flex flex-col sm:flex-row  text-muted-foreground pt-1">
                 {showSkeleton ? (
-                    <Skeleton className="border-2 border-primary-/20 w-60 h-44 max-sm:ml-8 sm:w-80 sm:h-48 rounded-2xl" />
+                    <Skeleton className="border-2 border-primary-/20   h-44  sm:w-80 sm:h-48 rounded-2xl" />
                 ) : (
                     <div className="">
                         <img
                             src={image}
                             alt="product"
-                            className="w-60 h-44 max-sm:ml-8 sm:w-80 sm:h-48 rounded-2xl shadow-md shadow-gray-600"
+                            className="w-60 h-44  sm:w-80 sm:h-48 rounded-2xl shadow-md shadow-gray-600"
                         />
                     </div>
                 )}
 
-                <div className="pl-10 w-full mt-3">
+                <div className="pl-10 w-full mt-3 ">
                     <p className="w-[80%] pb-3">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Eius odio hic mollitia qui sequi. Vitae animi earum
